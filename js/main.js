@@ -150,7 +150,30 @@
     if (e.key === "ArrowRight") stepLightbox(1);
   });
 
+  /* ---------- 5. Event rails (horizontal scroll) ------------------------- */
+  document.querySelectorAll(".rail-wrap").forEach(function (wrap) {
+    var rail = wrap.querySelector(".rail");
+    var prev = wrap.querySelector(".rail-prev");
+    var next = wrap.querySelector(".rail-next");
+
+    function update() {
+      prev.disabled = rail.scrollLeft <= 4;
+      next.disabled = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4;
+    }
+    function step(dir) {
+      rail.scrollBy({ left: dir * rail.clientWidth * 0.9, behavior: "smooth" });
+    }
+
+    prev.addEventListener("click", function () { step(-1); });
+    next.addEventListener("click", function () { step(1); });
+    rail.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    window.addEventListener("hashchange", function () { setTimeout(update, 0); });
+    update();
+  });
+
   /* ---------- Init ------------------------------------------------------ */
   showPage();
+  window.dispatchEvent(new Event("resize")); // refresh rail arrows once the page is visible
   startAutoplay();
 })();

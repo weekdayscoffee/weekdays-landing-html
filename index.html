@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekdays Coffee — #TemanKantor</title>
+  <meta name="description" content="Weekdays Coffee — kopi, food, dan kolaborasi untuk teman kantor. Find your little pause." />
+  <link rel="icon" type="image/jpeg" href="assets/weekdays-logo-ig.jpg" />
+  <link rel="apple-touch-icon" href="assets/weekdays-logo-ig.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Icon sprite (lucide icons) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 12h16M4 6h16M4 18h16"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></symbol>
+      <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ========================= NAVBAR ========================= -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#home" class="brand" aria-label="Weekdays Coffee, beranda">
+        <span class="wordmark">WEEKDAYS<sup>®</sup></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navigasi utama">
+        <a href="#home" class="nav-link" data-page-link="home">Beranda</a>
+        <a href="#about" class="nav-link" data-page-link="about">Tentang</a>
+        <a href="#outlet" class="nav-link" data-page-link="outlet">Outlet</a>
+        <a href="#event" class="nav-link" data-page-link="event">Event</a>
+        <a href="https://weekdayscoffee.id" class="nav-cta" target="_blank" rel="noopener noreferrer">Pesan Sekarang</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="icon icon-lg icon-open"><use href="#i-menu"/></svg>
+        <svg class="icon icon-lg icon-close"><use href="#i-x"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#home" class="mobile-link" data-page-link="home"><span>Beranda</span><span class="active-dot"></span></a>
+      <a href="#about" class="mobile-link" data-page-link="about"><span>Tentang</span><span class="active-dot"></span></a>
+      <a href="#outlet" class="mobile-link" data-page-link="outlet"><span>Outlet</span><span class="active-dot"></span></a>
+      <a href="#event" class="mobile-link" data-page-link="event"><span>Event</span><span class="active-dot"></span></a>
+      <a href="https://weekdayscoffee.id" class="mobile-cta" target="_blank" rel="noopener noreferrer">Pesan Sekarang</a>
+    </div>
+  </header>
+
+  <!-- ========================= HOME ========================= -->
+  <main class="page" id="page-home" data-page="home">
+
+    <!-- Hero carousel -->
+    <section class="hero-section" id="hero" aria-roledescription="carousel" aria-label="Sorotan Weekdays">
+      <div class="container">
+        <div class="hero-carousel">
+
+          <div class="hero-slides" aria-live="polite">
+
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+              <div class="hero-text">
+                <div class="eyebrow">Coffee • Food • Collaboration</div>
+                <h1 class="hero-title">Made better,<br /><em>together.</em></h1>
+                <p class="lead hero-lead">Kopi yang tepat, menu yang bikin fokus, dan ruang hangat buat teman kantor. Weekdays hadir untuk menemani setiap jeda kecilmu. Find your little pause.</p>
+                <div class="hero-btns">
+                  <a href="#outlet" class="btn btn-primary">Temukan Outlet</a>
+                  <a href="#event" class="btn btn-ghost">Event &amp; Kolaborasi</a>
+                </div>
+              </div>
+              <div class="hero-img-wrap">
+                <img class="hero-img" src="assets/weekdays-01-hero-madebettertogether.jpg" alt="Suasana Weekdays Coffee" />
+                <div class="hero-tag">#TemanKantor</div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+              <div class="hero-text">
+                <div class="eyebrow">Take a Break</div>
+                <h1 class="hero-title">Jeda sejenak,<br /><em>ngopi dulu.</em></h1>
+                <p class="lead hero-lead">Sehari penuh meeting? Sisihkan waktu untuk segelas kopi dan makan siang yang enak. Biar sore tetap semangat.</p>
+                <div class="hero-btns">
+                  <a href="#outlet" class="btn btn-primary">Temukan Outlet</a>
+                  <a href="#about" class="btn btn-ghost">Tentang Kami</a>
+                </div>
+              </div>
+              <div class="hero-img-wrap">
+                <img class="hero-img" src="assets/weekdays-02-take-a-break.jpg" alt="Kopi dan makan siang di Weekdays" loading="lazy" />
+                <div class="hero-tag">Coffee + Lunch</div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+              <div class="hero-text">
+                <div class="eyebrow">Signature Drinks</div>
+                <h1 class="hero-title">Diseduh dengan<br /><em>sepenuh hati.</em></h1>
+                <p class="lead hero-lead">Dari kopi susu yang creamy sampai matcha yang di-whisk langsung, setiap gelas dibuat untuk menemani harimu.</p>
+                <div class="hero-btns">
+                  <a href="#outlet" class="btn btn-primary">Temukan Outlet</a>
+                  <a href="#about" class="btn btn-ghost">Tentang Kami</a>
+                </div>
+              </div>
+              <div class="hero-img-wrap">
+                <img class="hero-img" src="assets/weekdays-03b-matcha-slide2.jpg" alt="Matcha di-whisk manual" loading="lazy" />
+                <div class="hero-tag">Matcha &amp; Kopi</div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="hero-slide">
+              <div class="hero-text">
+                <div class="eyebrow">Food &amp; Halal</div>
+                <h1 class="hero-title">Makan siang yang<br /><em>bikin fokus.</em></h1>
+                <p class="lead hero-lead">Nasi goreng kebuli, pasta, hingga steak. Menu halal yang mengenyangkan, siap menemani jam istirahatmu.</p>
+                <div class="hero-btns">
+                  <a href="#outlet" class="btn btn-primary">Temukan Outlet</a>
+                  <a href="#about" class="btn btn-ghost">Tentang Kami</a>
+                </div>
+              </div>
+              <div class="hero-img-wrap">
+                <img class="hero-img" src="assets/weekdays-09b-nasigoreng-kebuli-slide2.jpg" alt="Nasi Goreng Sapi Kebuli" loading="lazy" />
+                <div class="hero-tag">100% Halal</div>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="hero-slide">
+              <div class="hero-text">
+                <div class="eyebrow">Event &amp; Kolaborasi</div>
+                <h1 class="hero-title">Ruang buat kumpul,<br /><em>kerja, dan kolaborasi.</em></h1>
+                <p class="lead hero-lead">Dari buka puasa bersama sampai gathering tim. Ayo wujudkan acaramu bareng Weekdays.</p>
+                <div class="hero-btns">
+                  <a href="#event" class="btn btn-primary">Event &amp; Kolaborasi</a>
+                  <a href="#outlet" class="btn btn-ghost">Temukan Outlet</a>
+                </div>
+              </div>
+              <div class="hero-img-wrap">
+                <img class="hero-img" src="assets/weekdays-08a-iftar-slide1.jpg" alt="Acara bersama Weekdays" loading="lazy" />
+                <div class="hero-tag">#WeekdaysEvent</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="hero-controls">
+            <button class="hero-arrow hero-arrow-prev" id="hero-prev" aria-label="Slide sebelumnya">
+              <svg class="icon icon-md"><use href="#i-chevron-left"/></svg>
+            </button>
+            <div class="hero-dots" id="hero-dots">
+              <button class="active" aria-label="Slide 1"></button>
+              <button aria-label="Slide 2"></button>
+              <button aria-label="Slide 3"></button>
+              <button aria-label="Slide 4"></button>
+              <button aria-label="Slide 5"></button>
+            </div>
+            <button class="hero-arrow hero-arrow-next" id="hero-next" aria-label="Slide berikutnya">
+              <svg class="icon icon-md"><use href="#i-chevron-right"/></svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Stat strip -->
+    <section class="stat-section">
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><div class="stat-num">2</div><div class="stat-label">Lokasi strategis</div></div>
+          <div class="stat"><div class="stat-num">16.7K+</div><div class="stat-label">Teman Weekdays</div></div>
+          <div class="stat"><div class="stat-num">06.00</div><div class="stat-label">Buka setiap pagi kerja</div></div>
+          <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Halal &amp; homemade</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="two">
+          <div>
+            <h2 class="h2">Teman kantormu <br /><em class="accent-roast">setiap hari kerja.</em></h2>
+            <p class="lead">Kejar deadline atau butuh jeda sebentar, Weekdays selalu sedia kopi terbaik dan menu yang bikin siang lebih ringan. Lunch vibes bareng teman kantor. Kami siapin makanannya, kamu tinggal menikmati harimu.</p>
+          </div>
+          <img class="two-img" src="assets/weekdays-11-greenwall-temankantor.jpg" alt="Teman kantor di Weekdays" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Favorites -->
+    <section class="section-pad bg-latte">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Menu Pilihan</div>
+          <h2 class="h2">Favorit Teman Weekdays</h2>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img class="menu-img" src="assets/weekdays-05-barista-pour.jpg" alt="Kopi Susu Weekdays" loading="lazy" />
+            <div class="menu-name">Kopi Susu Weekdays</div>
+            <div class="menu-note">Signature, light ke strong</div>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" src="assets/weekdays-03c-matcha-slide3.jpg" alt="Matcha Recharge" loading="lazy" />
+            <div class="menu-name">Matcha Recharge</div>
+            <div class="menu-note">Green, creamy, dreamy</div>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" src="assets/weekdays-06a-steak-slide1.jpg" alt="NZ Steak Rib Eye" loading="lazy" />
+            <div class="menu-name">NZ Steak Rib Eye</div>
+            <div class="menu-note">Juicy &amp; satisfying</div>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" src="assets/weekdays-10b-penne-napolitana-slide2.jpg" alt="Penne Napolitana" loading="lazy" />
+            <div class="menu-name">Penne Napolitana</div>
+            <div class="menu-note">Saucy &amp; comforting</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Halal -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="two">
+          <img class="two-img" src="assets/weekdays-09b-nasigoreng-kebuli-slide2.jpg" alt="Nasi Goreng Sapi Kebuli Weekdays" loading="lazy" />
+          <div>
+            <h2 class="h2">Sertifikasi Halal</h2>
+            <p class="lead">Kami berkomitmen memberikan pelayanan terbaik untuk teman kantor di mana pun. Seluruh produk Weekdays diproduksi halal dan menjalankan Sistem Jaminan Produk Halal sesuai ketentuan BPJPH dan LPPOM MUI.</p>
+            <div class="halal-badge">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-shield-check"/></svg>
+              <span>SERTIFIKAT HALAL NO : ID61110024716600725</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="section-pad bg-espresso">
+      <div class="container text-center">
+        <h2 class="cta-title">Mari mulai harimu bersama Weekdays</h2>
+        <p class="cta-text">Satukan langkah teman kantor dalam ruang yang siap menyapa dan menghangatkan setiap jeda kerja.</p>
+        <a href="#outlet" class="btn btn-light">Temukan Outlet Terdekat</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================= ABOUT ========================= -->
+  <main class="page" id="page-about" data-page="about" hidden>
+
+    <section class="section-pad">
+      <div class="container">
+        <div class="two">
+          <div>
+            <div class="eyebrow">Tentang Weekdays</div>
+            <h1 class="page-title">Ini cerita kami</h1>
+            <p class="lead">Kenalan lebih dekat dengan Weekdays. Cerita, perjalanan, dan orang-orang di balik setiap cangkir, semua bermula dari keinginan menemani teman kantor melewati hari kerja.</p>
+          </div>
+          <div class="hero-img-wrap">
+            <img class="about-img" src="assets/weekdays-02-take-a-break.jpg" alt="Menu Weekdays" />
+          </div>
+        </div>
+        <div class="stats-about">
+          <div class="stat"><div class="stat-num">2</div><div class="stat-label">Lokasi</div></div>
+          <div class="stat"><div class="stat-num">16.7K+</div><div class="stat-label">Teman Weekdays</div></div>
+          <div class="stat"><div class="stat-num">06.00</div><div class="stat-label">Buka pagi kerja</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission band -->
+    <section class="section-pad bg-espresso text-white">
+      <div class="container">
+        <div class="mission-intro">
+          <span class="bar"></span>
+          <h2>Menemani harimu</h2>
+          <p>Lebih dari sekadar rutinitas pagi, Weekdays hadir jadi bagian dari dinamika hidupmu. Menyediakan ketenangan sebelum kesibukan dimulai, hingga menjadi ruang hangat saat berbagi cerita after office bareng teman kantor. Berawal dari niat sederhana ini, kami terus tumbuh dan hadir utuh untuk menemani harimu.</p>
+        </div>
+
+        <div class="two">
+          <div class="hero-img-wrap">
+            <img class="about-img" src="assets/weekdays-07a-healing-temankantor-slide1.jpg" alt="Healing sejenak bareng #TemanKantor" loading="lazy" />
+          </div>
+          <div class="vision-mission">
+            <h3>Visi</h3>
+            <p class="lead on-dark">Menghadirkan kopi dan pengalaman lokal yang dibuat dengan cinta, untuk selalu menemani hari teman kantor di mana pun mereka berada.</p>
+            <h3 class="spaced">Misi</h3>
+            <ul class="about-list">
+              <li>Menghadirkan kopi dan menu berkualitas untuk setiap jeda kerja.</li>
+              <li>Membangun ruang yang nyaman bagi kolaborasi teman kantor.</li>
+              <li>Terus berinovasi dalam produk dan layanan terbaik.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-head section-head-sm">
+          <div class="eyebrow">Our Weekdays Journey</div>
+          <h2 class="h2">Dari satu ide ke <em class="accent-roast">dua kota</em></h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-card"><div class="timeline-year">2019</div><p>Weekdays lahir dari satu gagasan sederhana: menemani jeda kerja dengan kopi yang tepat.</p></div>
+          <div class="timeline-card"><div class="timeline-year">2021</div><p>Outlet pertama resmi hadir di Menara Bidakara, Jakarta Selatan.</p></div>
+          <div class="timeline-card"><div class="timeline-year">2023</div><p>Menu makanan diperluas. Good coffee bertemu good food untuk teman kantor.</p></div>
+          <div class="timeline-card"><div class="timeline-year">2025</div><p>Komunitas Weekdays tumbuh melewati 16 ribu teman setia.</p></div>
+          <div class="timeline-card"><div class="timeline-year">2026</div><p>Weekdays hadir di Husein Sastranegara Airport, Bandung.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================= OUTLET ========================= -->
+  <main class="page" id="page-outlet" data-page="outlet" hidden>
+
+    <section class="section-pad outlet-intro text-center">
+      <div class="container">
+        <div class="eyebrow">Outlet</div>
+        <h1 class="outlet-title">Weekdays hadir lebih dekat untukmu, teman kantor</h1>
+      </div>
+    </section>
+
+    <section class="outlet-cards-section">
+      <div class="container">
+        <div class="outlet-grid">
+          <div class="outlet-card">
+            <div class="outlet-card-top">
+              <div class="outlet-tag">Jakarta Selatan</div>
+              <h3 class="outlet-name">Weekdays Menara Bidakara</h3>
+              <p class="outlet-addr">Menara Bidakara, Lobby Utara LD, Jl. Jend. Gatot Subroto, Jakarta Selatan.</p>
+            </div>
+            <div class="outlet-hours">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg>
+              <div class="outlet-hours-text">
+                <div>Senin–Jumat 06.00–20.00</div>
+                <div>Sabtu 08.00–17.00</div>
+                <div>Minggu tutup</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="outlet-card">
+            <div class="outlet-card-top">
+              <div class="outlet-tag">Bandung</div>
+              <h3 class="outlet-name">Weekdays Husein Sastranegara</h3>
+              <p class="outlet-addr">Bandara Husein Sastranegara (Departure Gate), Bandung, Jawa Barat.</p>
+            </div>
+            <div class="outlet-hours">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg>
+              <div class="outlet-hours-text">
+                <div>Buka setiap hari</div>
+                <div>Mengikuti jam operasional bandara</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery: 9 photos, 3x3 grid. Click opens the lightbox (js/main.js) -->
+    <section class="section-pad gallery-section">
+      <div class="container">
+        <div class="gallery" id="gallery">
+          <button class="gallery-item" aria-label="Lihat foto 1 ukuran penuh"><img class="gallery-img" src="assets/weekdays-01-hero-madebettertogether.jpg" alt="Suasana outlet Weekdays 1" loading="lazy" /></button>
+          <button class="gallery-item" aria-label="Lihat foto 2 ukuran penuh"><img class="gallery-img" src="assets/weekdays-07b-healing-temankantor-slide2.jpg" alt="Suasana outlet Weekdays 2" loading="lazy" /></button>
+          <button class="gallery-item" aria-label="Lihat foto 3 ukuran penuh"><img class="gallery-img" src="assets/weekdays-04-workday-lighter.jpg" alt="Suasana outlet Weekdays 3" loading="lazy" /></button>
+          <button class="gallery-item" aria-label="Lihat foto 4 ukuran penuh"><img class="gallery-img" src="assets/weekdays-06b-steak-slide2.jpg" alt="Suasana outlet Weekdays 4" loading="lazy" /></button>
+          <button class="gallery-item" aria-label="Lihat foto 5 ukuran penuh"><img class="gallery-img" src="assets/weekdays-09a-nasigoreng-kebuli-slide1.jpg" alt="Suasana outlet Weekdays 5" loading="lazy" /></button>
+          <button class="gallery-item" aria-label="Lihat foto 6 ukuran penuh"><img class="gallery-img" src="assets/weekdays-03a-matcha-slide1.jpg" alt="Suasana outlet Weekdays 6" loading="lazy" /></button>
+          <button class="gallery-item" aria-label="Lihat foto 7 ukuran penuh"><img class="gallery-img" src="assets/weekdays-03b-matcha-slide2.jpg" alt="Suasana outlet Weekdays 7" loading="lazy" /></button>
+          <button class="gallery-item" aria-label="Lihat foto 8 ukuran penuh"><img class="gallery-img" src="assets/weekdays-10a-penne-napolitana-slide1.jpg" alt="Suasana outlet Weekdays 8" loading="lazy" /></button>
+          <button class="gallery-item" aria-label="Lihat foto 9 ukuran penuh"><img class="gallery-img" src="assets/weekdays-11-greenwall-temankantor.jpg" alt="Suasana outlet Weekdays 9" loading="lazy" /></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================= EVENT ========================= -->
+  <main class="page" id="page-event" data-page="event" hidden>
+
+    <section class="event-hero">
+      <img class="event-hero-img" src="assets/weekdays-08a-iftar-slide1.jpg" alt="Weekdays event" />
+      <div class="event-hero-overlay">
+        <h1>#<em>Weekdays</em>Event</h1>
+        <p>Teman setia yang siap melengkapi setiap event kantor dengan aroma dan rasa yang mendukung, menciptakan momen tak terlupakan bagi setiap tamu.</p>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Our Package</div>
+          <h2 class="h2">Pilih paketmu</h2>
+          <p class="section-sub">Setiap event dapat menampung hingga 80 cups.</p>
+        </div>
+
+        <div class="three">
+          <div class="package-card">
+            <h3>Full Package</h3>
+            <div class="package-cap"><span>Kapasitas</span><strong>80</strong><span>cups</span></div>
+            <p>Layanan lengkap dengan branding staff &amp; properti untuk perayaan kantor.</p>
+          </div>
+          <div class="package-card">
+            <h3>Weekdays-IN Bucket</h3>
+            <div class="package-cap"><span>Kapasitas</span><strong>50</strong><span>cups</span></div>
+            <p>Bucket praktis melengkapi setiap kebersamaan teman kantor.</p>
+          </div>
+          <div class="package-card">
+            <h3>Compact Package</h3>
+            <div class="package-cap"><span>Kapasitas</span><strong>30</strong><span>cups</span></div>
+            <p>Paket ringkas, pas untuk gathering kecil dan after office.</p>
+          </div>
+        </div>
+
+        <div class="hashtag-block">
+          <p>Kami menyediakan berbagai pilihan menu untuk</p>
+          <div class="hashtag">#TemaniHariBahagiamu</div>
+        </div>
+
+        <div class="menu-grid menu-grid-event">
+          <div class="menu-item">
+            <img class="menu-img" src="assets/weekdays-05-barista-pour.jpg" alt="Cup (8oz)" loading="lazy" />
+            <div class="menu-name menu-name-sm">Cup (8oz)</div>
+            <div class="menu-note">Kopi Susu</div>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" src="assets/weekdays-04-workday-lighter.jpg" alt="Kopi Susu (14oz)" loading="lazy" />
+            <div class="menu-name menu-name-sm">Kopi Susu (14oz)</div>
+            <div class="menu-note">Light ke strong</div>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" src="assets/weekdays-03c-matcha-slide3.jpg" alt="Matcha Series (14oz)" loading="lazy" />
+            <div class="menu-name menu-name-sm">Matcha Series (14oz)</div>
+            <div class="menu-note">Green &amp; creamy</div>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" src="assets/weekdays-08b-iftar-slide2.jpg" alt="Bites & Meals" loading="lazy" />
+            <div class="menu-name menu-name-sm">Bites &amp; Meals</div>
+            <div class="menu-note">Good food, good company</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section-pad bg-latte">
+      <div class="container">
+        <div class="two">
+          <div>
+            <h2 class="h2">Hubungi kami untuk event &amp; kolaborasi</h2>
+            <p class="lead">Mari bersama menciptakan pengalaman tak terlupakan untuk teman kantormu. After office, gathering, atau perayaan tim, Weekdays siap menemani.</p>
+            <div class="event-contacts">
+              <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer">
+                <svg class="icon icon-md" aria-hidden="true"><use href="#i-instagram"/></svg>
+                @weekdayscoffee.id
+              </a>
+              <a href="mailto:marketing@weekdayscoffee.id">
+                <svg class="icon icon-md" aria-hidden="true"><use href="#i-mail"/></svg>
+                marketing@weekdayscoffee.id
+              </a>
+              <a href="https://weekdayscoffee.id" target="_blank" rel="noopener noreferrer">
+                <svg class="icon icon-md" aria-hidden="true"><use href="#i-globe"/></svg>
+                weekdayscoffee.id
+              </a>
+            </div>
+          </div>
+          <img class="two-img" src="assets/weekdays-08c-iftar-slide3.jpg" alt="Weekdays event catering" loading="lazy" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand"><span class="wordmark">WEEKDAYS<sup>®</sup></span></div>
+          <p class="footer-desc">Kopi, food, dan kolaborasi untuk teman kantor. Find your little pause, di mana pun kamu berada.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon-xs" aria-hidden="true"><use href="#i-instagram"/></svg>
+              @weekdayscoffee.id
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="foot-head">Halaman</div>
+          <a href="#home" class="foot-link">Beranda</a>
+          <a href="#about" class="foot-link">Tentang</a>
+          <a href="#outlet" class="foot-link">Outlet</a>
+          <a href="#event" class="foot-link">Event</a>
+        </div>
+
+        <div class="footer-col">
+          <div class="foot-head">Hubungi Kami</div>
+          <div class="foot-row">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>
+            <div>
+              <p>Menara Bidakara, Jakarta Selatan</p>
+              <p>Husein Sastranegara, Bandung</p>
+            </div>
+          </div>
+          <div class="foot-row">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-mail"/></svg>
+            <p>marketing@weekdayscoffee.id</p>
+          </div>
+          <div class="foot-row">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-globe"/></svg>
+            <p>weekdayscoffee.id</p>
+          </div>
+          <div class="foot-row">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-shield-check"/></svg>
+            <div>
+              <p>Sertifikasi Halal</p>
+              <p class="strong">ID61110024716600725</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-wrap">
+      <div class="container">
+        <div class="footer-bottom">
+          <span class="tagline">Menemani harimu.</span>
+          <span>© Copyright 2026. All Rights Reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================= LIGHTBOX ========================= -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan foto ukuran penuh" hidden>
+    <button class="lightbox-close" id="lb-close" aria-label="Tutup tampilan penuh"><svg class="icon icon-lg"><use href="#i-x"/></svg></button>
+    <button class="lightbox-btn lightbox-prev" id="lb-prev" aria-label="Foto sebelumnya"><svg class="icon icon-xl"><use href="#i-chevron-left"/></svg></button>
+    <div class="lightbox-content"><img class="lightbox-img" id="lb-img" src="" alt="" /></div>
+    <button class="lightbox-btn lightbox-next" id="lb-next" aria-label="Foto berikutnya"><svg class="icon icon-xl"><use href="#i-chevron-right"/></svg></button>
+    <div class="lightbox-counter" id="lb-counter"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

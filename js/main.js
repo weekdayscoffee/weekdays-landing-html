@@ -49,6 +49,7 @@
   var dots = heroSection.querySelectorAll(".hero-dots button");
   var current = 0;
   var timer = null;
+  var hovering = false;
 
   function goTo(index) {
     current = (index + slides.length) % slides.length;
@@ -58,7 +59,8 @@
     dots.forEach(function (d, i) {
       d.classList.toggle("active", i === current);
     });
-    startAutoplay();
+    // Klik panah/dot saat kursor di atas hero tidak boleh menyalakan autoplay lagi
+    if (!hovering) startAutoplay();
   }
 
   function startAutoplay() {
@@ -85,8 +87,14 @@
   });
 
   // Pause while the pointer is over the hero
-  heroSection.addEventListener("mouseenter", stopAutoplay);
-  heroSection.addEventListener("mouseleave", startAutoplay);
+  heroSection.addEventListener("mouseenter", function () {
+    hovering = true;
+    stopAutoplay();
+  });
+  heroSection.addEventListener("mouseleave", function () {
+    hovering = false;
+    startAutoplay();
+  });
 
   /* ---------- 4. Gallery lightbox --------------------------------------- */
   var lightbox = document.getElementById("lightbox");
@@ -161,7 +169,8 @@
       next.disabled = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4;
     }
     function step(dir) {
-      rail.scrollBy({ left: dir * rail.clientWidth * 0.9, behavior: "smooth" });
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      rail.scrollBy({ left: dir * rail.clientWidth * 0.8, behavior: reduce ? "auto" : "smooth" });
     }
 
     prev.addEventListener("click", function () { step(-1); });
@@ -171,6 +180,65 @@
     window.addEventListener("hashchange", function () { setTimeout(update, 0); });
     update();
   });
+
+  /* ---------- 6. Client logos: drifts on its own, swipeable by hand ----- */
+  // The list is rendered twice in the HTML, so the drift loops without a jump.
+  var logoStrip = document.querySelector(".logo-strip");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (logoStrip && !reduceMotion) {
+    var SPEED = 36; // px per second
+    var pos = logoStrip.scrollLeft;
+    var logoPaused = false;
+    var last = performance.now();
+    var resumeTimer = null;
+
+    var tickLogos = function (now) {
+      var dt = Math.min(now - last, 100);
+      last = now;
+      if (logoStrip.offsetParent === null) {
+        // Event page is hidden (display: none): keep the position in sync, don't drift
+        pos = logoStrip.scrollLeft;
+      } else if (!logoPaused) {
+        var half = logoStrip.scrollWidth / 2;
+        pos += (SPEED * dt) / 1000;
+        if (half > 0 && pos >= half) pos = pos % half;
+        logoStrip.scrollLeft = pos;
+      }
+      requestAnimationFrame(tickLogos);
+    };
+
+    var pauseLogos = function () {
+      clearTimeout(resumeTimer);
+      logoPaused = true;
+    };
+    var resumeLogos = function (delay) {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(function () {
+        pos = logoStrip.scrollLeft;
+        logoPaused = false;
+      }, delay);
+    };
+
+    logoStrip.addEventListener("mouseenter", pauseLogos);
+    logoStrip.addEventListener("mouseleave", function () { resumeLogos(0); });
+    logoStrip.addEventListener("focusin", pauseLogos);
+    logoStrip.addEventListener("focusout", function () { resumeLogos(0); });
+    logoStrip.addEventListener("touchstart", pauseLogos, { passive: true });
+    logoStrip.addEventListener("touchend", function () { resumeLogos(2500); }); // let swipe momentum finish
+
+    requestAnimationFrame(tickLogos);
+  }
+
+  /* ---------- 7. Image fallback: foto yang gagal dimuat jadi blok gradasi -- */
+  // Error events on <img> do not bubble, so listen in the capture phase.
+  document.addEventListener(
+    "error",
+    function (e) {
+      if (e.target && e.target.tagName === "IMG") e.target.classList.add("is-broken");
+    },
+    true
+  );
 
   /* ---------- Init ------------------------------------------------------ */
   showPage();

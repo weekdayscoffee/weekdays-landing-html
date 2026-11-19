@@ -407,183 +407,217 @@
     </section>
 
     <!-- ===== Event yang akan datang =====
-         Isi contoh: ganti tanggal, judul, lokasi, dan gambar sesuai event sebenarnya. -->
-    <section class="section-pad">
+         Isi contoh: ganti tanggal, judul, lokasi, dan gambar sesuai event sebenarnya.
+         Sumber data yang sama dengan UPCOMING_EVENTS di src/App.jsx. -->
+    <section class="section-pad events-upcoming">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Upcoming</div>
-          <h2 class="h2">Event yang akan datang</h2>
-          <p class="section-sub">Catat tanggalnya dan ajak teman kantormu.</p>
-        </div>
         <div class="rail-wrap">
-          <button class="rail-btn rail-prev" aria-label="Geser ke kiri"><svg class="icon icon-md"><use href="#i-chevron-left"/></svg></button>
-          <button class="rail-btn rail-next" aria-label="Geser ke kanan"><svg class="icon icon-md"><use href="#i-chevron-right"/></svg></button>
-        <div class="event-grid rail" aria-label="Daftar event yang akan datang" tabindex="0">
-          <article class="event-card">
-            <div class="event-card-img-wrap">
-              <img class="event-card-img" src="assets/weekdays-03b-matcha-slide2.jpg" alt="Matcha Whisking Class" loading="lazy" />
-              <div class="event-date"><span class="d">05</span><span class="m">Des</span></div>
+          <div class="rail-head">
+            <div>
+              <h2 class="rail-title">Event yang akan datang</h2>
+              <p class="rail-sub">Catat tanggalnya, lalu ajak teman kantormu.</p>
             </div>
-            <div class="event-card-body">
-              <div class="event-meta">Jumat · 16.00–18.00 WIB</div>
-              <h3>Matcha Whisking Class</h3>
-              <p>Belajar whisk matcha sendiri bareng barista Weekdays, lalu bawa pulang racikanmu.</p>
-              <div class="event-loc"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Menara Bidakara</div>
-              <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Daftar via Instagram</a>
+            <div class="rail-controls">
+              <button class="rail-prev" aria-label="Geser ke kiri"><svg class="icon icon-md" aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+              <button class="rail-next" aria-label="Geser ke kanan"><svg class="icon icon-md" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
             </div>
-          </article>
-          <article class="event-card">
-            <div class="event-card-img-wrap">
-              <img class="event-card-img" src="assets/weekdays-07b-healing-temankantor-slide2.jpg" alt="After Office #TemanKantor" loading="lazy" />
-              <div class="event-date"><span class="d">12</span><span class="m">Des</span></div>
-            </div>
-            <div class="event-card-body">
-              <div class="event-meta">Jumat · 17.30–20.00 WIB</div>
-              <h3>After Office #TemanKantor</h3>
-              <p>Tutup minggu dengan kopi, bites, dan obrolan santai bareng komunitas Weekdays.</p>
-              <div class="event-loc"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Menara Bidakara</div>
-              <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Daftar via Instagram</a>
-            </div>
-          </article>
-          <article class="event-card">
-            <div class="event-card-img-wrap">
-              <img class="event-card-img" src="assets/weekdays-05-barista-pour.jpg" alt="Year-End Coffee Tasting" loading="lazy" />
-              <div class="event-date"><span class="d">19</span><span class="m">Des</span></div>
-            </div>
-            <div class="event-card-body">
-              <div class="event-meta">Jumat · 15.00–17.00 WIB</div>
-              <h3>Year-End Coffee Tasting</h3>
-              <p>Cicipi menu spesial akhir tahun sebelum resmi masuk daftar menu.</p>
-              <div class="event-loc"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Husein Sastranegara</div>
-              <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Daftar via Instagram</a>
-            </div>
-          </article>
-          <article class="event-card">
-            <div class="event-card-img-wrap">
-              <img class="event-card-img" src="assets/weekdays-06a-steak-slide1.jpg" alt="Steak Lunch Day" loading="lazy" />
-              <div class="event-date"><span class="d">09</span><span class="m">Jan</span></div>
-            </div>
-            <div class="event-card-body">
-              <div class="event-meta">Jumat · 12.00–14.00 WIB</div>
-              <h3>Steak Lunch Day</h3>
-              <p>Makan siang spesial NZ Steak Rib Eye dengan harga khusus untuk teman kantor.</p>
-              <div class="event-loc"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Menara Bidakara</div>
-              <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Daftar via Instagram</a>
-            </div>
-          </article>
-          <article class="event-card">
-            <div class="event-card-img-wrap">
-              <img class="event-card-img" src="assets/weekdays-10b-penne-napolitana-slide2.jpg" alt="Pasta Night After Office" loading="lazy" />
-              <div class="event-date"><span class="d">16</span><span class="m">Jan</span></div>
-            </div>
-            <div class="event-card-body">
-              <div class="event-meta">Jumat · 17.00–19.00 WIB</div>
-              <h3>Pasta Night After Office</h3>
-              <p>Penne Napolitana dan kopi favorit untuk menutup minggu kerja.</p>
-              <div class="event-loc"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Menara Bidakara</div>
-              <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Daftar via Instagram</a>
-            </div>
-          </article>
-          <article class="event-card">
-            <div class="event-card-img-wrap">
-              <img class="event-card-img" src="assets/weekdays-03c-matcha-slide3.jpg" alt="Matcha Recharge Session" loading="lazy" />
-              <div class="event-date"><span class="d">23</span><span class="m">Jan</span></div>
-            </div>
-            <div class="event-card-body">
-              <div class="event-meta">Jumat · 15.00–17.00 WIB</div>
-              <h3>Matcha Recharge Session</h3>
-              <p>Cicipi varian matcha terbaru dan ngobrol santai soal ritual minum matcha.</p>
-              <div class="event-loc"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Husein Sastranegara</div>
-              <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Daftar via Instagram</a>
-            </div>
-          </article>
-          <article class="event-card">
-            <div class="event-card-img-wrap">
-              <img class="event-card-img" src="assets/weekdays-11-greenwall-temankantor.jpg" alt="Photo Walk #TemanKantor" loading="lazy" />
-              <div class="event-date"><span class="d">30</span><span class="m">Jan</span></div>
-            </div>
-            <div class="event-card-body">
-              <div class="event-meta">Jumat · 16.00–18.00 WIB</div>
-              <h3>Photo Walk #TemanKantor</h3>
-              <p>Hunting foto bareng di sudut-sudut favorit Weekdays, hadiah untuk foto terbaik.</p>
-              <div class="event-loc"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Menara Bidakara</div>
-              <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Daftar via Instagram</a>
-            </div>
-          </article>
-        </div>
+          </div>
+          <div class="rail up-rail" aria-label="Daftar event yang akan datang" tabindex="0">
+            <article class="up">
+              <div class="up-photo">
+                <img class="up-img" src="assets/weekdays-03b-matcha-slide2.jpg" alt="Matcha Whisking Class" loading="lazy" />
+                <div class="up-date"><span class="d">05</span><span class="m">Des</span></div>
+              </div>
+              <div class="up-body">
+                <h3>Matcha Whisking Class</h3>
+                <p>Belajar whisk matcha sendiri bareng barista Weekdays, lalu bawa pulang racikanmu.</p>
+                <ul class="up-facts">
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg>Jumat, 16.00–18.00 WIB</li>
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Menara Bidakara</li>
+                </ul>
+                <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="up-cta">Daftar lewat Instagram</a>
+              </div>
+            </article>
+            <article class="up">
+              <div class="up-photo">
+                <img class="up-img" src="assets/weekdays-07b-healing-temankantor-slide2.jpg" alt="After Office #TemanKantor" loading="lazy" />
+                <div class="up-date"><span class="d">12</span><span class="m">Des</span></div>
+              </div>
+              <div class="up-body">
+                <h3>After Office #TemanKantor</h3>
+                <p>Tutup minggu dengan kopi, bites, dan obrolan santai bareng komunitas Weekdays.</p>
+                <ul class="up-facts">
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg>Jumat, 17.30–20.00 WIB</li>
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Menara Bidakara</li>
+                </ul>
+                <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="up-cta">Daftar lewat Instagram</a>
+              </div>
+            </article>
+            <article class="up">
+              <div class="up-photo">
+                <img class="up-img" src="assets/weekdays-05-barista-pour.jpg" alt="Year-End Coffee Tasting" loading="lazy" />
+                <div class="up-date"><span class="d">19</span><span class="m">Des</span></div>
+              </div>
+              <div class="up-body">
+                <h3>Year-End Coffee Tasting</h3>
+                <p>Cicipi menu spesial akhir tahun sebelum resmi masuk daftar menu.</p>
+                <ul class="up-facts">
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg>Jumat, 15.00–17.00 WIB</li>
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Husein Sastranegara</li>
+                </ul>
+                <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="up-cta">Daftar lewat Instagram</a>
+              </div>
+            </article>
+            <article class="up">
+              <div class="up-photo">
+                <img class="up-img" src="assets/weekdays-06a-steak-slide1.jpg" alt="Steak Lunch Day" loading="lazy" />
+                <div class="up-date"><span class="d">09</span><span class="m">Jan</span></div>
+              </div>
+              <div class="up-body">
+                <h3>Steak Lunch Day</h3>
+                <p>Makan siang spesial NZ Steak Rib Eye dengan harga khusus untuk teman kantor.</p>
+                <ul class="up-facts">
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg>Jumat, 12.00–14.00 WIB</li>
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Menara Bidakara</li>
+                </ul>
+                <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="up-cta">Daftar lewat Instagram</a>
+              </div>
+            </article>
+            <article class="up">
+              <div class="up-photo">
+                <img class="up-img" src="assets/weekdays-10b-penne-napolitana-slide2.jpg" alt="Pasta Night After Office" loading="lazy" />
+                <div class="up-date"><span class="d">16</span><span class="m">Jan</span></div>
+              </div>
+              <div class="up-body">
+                <h3>Pasta Night After Office</h3>
+                <p>Penne Napolitana dan kopi favorit untuk menutup minggu kerja.</p>
+                <ul class="up-facts">
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg>Jumat, 17.00–19.00 WIB</li>
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Menara Bidakara</li>
+                </ul>
+                <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="up-cta">Daftar lewat Instagram</a>
+              </div>
+            </article>
+            <article class="up">
+              <div class="up-photo">
+                <img class="up-img" src="assets/weekdays-03c-matcha-slide3.jpg" alt="Matcha Recharge Session" loading="lazy" />
+                <div class="up-date"><span class="d">23</span><span class="m">Jan</span></div>
+              </div>
+              <div class="up-body">
+                <h3>Matcha Recharge Session</h3>
+                <p>Cicipi varian matcha terbaru dan ngobrol santai soal ritual minum matcha.</p>
+                <ul class="up-facts">
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg>Jumat, 15.00–17.00 WIB</li>
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Husein Sastranegara</li>
+                </ul>
+                <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="up-cta">Daftar lewat Instagram</a>
+              </div>
+            </article>
+            <article class="up">
+              <div class="up-photo">
+                <img class="up-img" src="assets/weekdays-11-greenwall-temankantor.jpg" alt="Photo Walk #TemanKantor" loading="lazy" />
+                <div class="up-date"><span class="d">30</span><span class="m">Jan</span></div>
+              </div>
+              <div class="up-body">
+                <h3>Photo Walk #TemanKantor</h3>
+                <p>Hunting foto bareng di sudut-sudut favorit Weekdays, hadiah untuk foto terbaik.</p>
+                <ul class="up-facts">
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg>Jumat, 16.00–18.00 WIB</li>
+                  <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-map-pin"/></svg>Weekdays Menara Bidakara</li>
+                </ul>
+                <a href="https://www.instagram.com/weekdayscoffee.id/" target="_blank" rel="noopener noreferrer" class="up-cta">Daftar lewat Instagram</a>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ===== Event yang telah lalu ===== -->
-    <section class="section-pad bg-latte">
+    <section class="section-pad bg-latte events-past">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Past Events</div>
-          <h2 class="h2">Event yang telah lalu</h2>
-          <p class="section-sub">Momen nyata bareng teman kantor.</p>
-        </div>
         <div class="rail-wrap">
-          <button class="rail-btn rail-prev" aria-label="Geser ke kiri"><svg class="icon icon-md"><use href="#i-chevron-left"/></svg></button>
-          <button class="rail-btn rail-next" aria-label="Geser ke kanan"><svg class="icon icon-md"><use href="#i-chevron-right"/></svg></button>
-        <div class="past-grid rail" aria-label="Daftar event yang telah lalu" tabindex="0">
-          <figure class="past-item">
-            <img src="assets/weekdays-08a-iftar-slide1.jpg" alt="Iftar bersama teman kantor" loading="lazy" />
-            <figcaption><strong>Iftar Bersama Teman Kantor</strong><span>Ramadan 2026 · Menara Bidakara</span></figcaption>
-          </figure>
-          <figure class="past-item">
-            <img src="assets/weekdays-07a-healing-temankantor-slide1.jpg" alt="Healing sejenak bareng #TemanKantor" loading="lazy" />
-            <figcaption><strong>Healing Sejenak #TemanKantor</strong><span>Community meetup</span></figcaption>
-          </figure>
-          <figure class="past-item">
-            <img src="assets/weekdays-08b-iftar-slide2.jpg" alt="Coffee stall dan bites" loading="lazy" />
-            <figcaption><strong>Corporate Gathering</strong><span>Coffee stall &amp; bites</span></figcaption>
-          </figure>
-          <figure class="past-item">
-            <img src="assets/weekdays-01-hero-madebettertogether.jpg" alt="Made Better Together" loading="lazy" />
-            <figcaption><strong>Made Better Together</strong><span>Brand launch</span></figcaption>
-          </figure>
-          <figure class="past-item">
-            <img src="assets/weekdays-08c-iftar-slide3.jpg" alt="Buka Puasa Keluarga Kantor" loading="lazy" />
-            <figcaption><strong>Buka Puasa Keluarga Kantor</strong><span>Ramadan 2026 · Menara Bidakara</span></figcaption>
-          </figure>
-          <figure class="past-item">
-            <img src="assets/weekdays-09a-nasigoreng-kebuli-slide1.jpg" alt="Launching Nasi Goreng Kebuli" loading="lazy" />
-            <figcaption><strong>Launching Nasi Goreng Kebuli</strong><span>Menu launch · 2025</span></figcaption>
-          </figure>
-          <figure class="past-item">
-            <img src="assets/weekdays-06b-steak-slide2.jpg" alt="Steak Day on the Patio" loading="lazy" />
-            <figcaption><strong>Steak Day on the Patio</strong><span>Lunch event · 2025</span></figcaption>
-          </figure>
-          <figure class="past-item">
-            <img src="assets/weekdays-03a-matcha-slide1.jpg" alt="Matcha Tasting Session" loading="lazy" />
-            <figcaption><strong>Matcha Tasting Session</strong><span>Workshop · 2025</span></figcaption>
-          </figure>
-          <figure class="past-item">
-            <img src="assets/weekdays-02-take-a-break.jpg" alt="Take a Break Week" loading="lazy" />
-            <figcaption><strong>Take a Break Week</strong><span>Promo week · 2024</span></figcaption>
-          </figure>
-          <figure class="past-item">
-            <img src="assets/weekdays-11-greenwall-temankantor.jpg" alt="Grand Opening Green Wall" loading="lazy" />
-            <figcaption><strong>Grand Opening Green Wall</strong><span>Menara Bidakara · 2021</span></figcaption>
-          </figure>
-        </div>
+          <div class="rail-head">
+            <div>
+              <h2 class="rail-title">Event yang telah lalu</h2>
+              <p class="rail-sub">10 momen bareng teman kantor sejak 2021.</p>
+            </div>
+            <div class="rail-controls">
+              <button class="rail-prev" aria-label="Geser ke kiri"><svg class="icon icon-md" aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+              <button class="rail-next" aria-label="Geser ke kanan"><svg class="icon icon-md" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+            </div>
+          </div>
+          <div class="rail past-rail" aria-label="Daftar event yang telah lalu" tabindex="0">
+            <figure class="past">
+              <img class="past-img" src="assets/weekdays-08a-iftar-slide1.jpg" alt="Iftar Bersama Teman Kantor" loading="lazy" />
+              <figcaption><strong>Iftar Bersama Teman Kantor</strong><span>Menara Bidakara, 2026</span></figcaption>
+            </figure>
+            <figure class="past">
+              <img class="past-img" src="assets/weekdays-07a-healing-temankantor-slide1.jpg" alt="Healing Sejenak #TemanKantor" loading="lazy" />
+              <figcaption><strong>Healing Sejenak #TemanKantor</strong><span>Meetup komunitas, 2026</span></figcaption>
+            </figure>
+            <figure class="past">
+              <img class="past-img" src="assets/weekdays-08b-iftar-slide2.jpg" alt="Corporate Gathering" loading="lazy" />
+              <figcaption><strong>Corporate Gathering</strong><span>Coffee stall dan bites, 2026</span></figcaption>
+            </figure>
+            <figure class="past">
+              <img class="past-img" src="assets/weekdays-01-hero-madebettertogether.jpg" alt="Made Better Together" loading="lazy" />
+              <figcaption><strong>Made Better Together</strong><span>Peluncuran brand, 2025</span></figcaption>
+            </figure>
+            <figure class="past">
+              <img class="past-img" src="assets/weekdays-08c-iftar-slide3.jpg" alt="Buka Puasa Keluarga Kantor" loading="lazy" />
+              <figcaption><strong>Buka Puasa Keluarga Kantor</strong><span>Menara Bidakara, 2026</span></figcaption>
+            </figure>
+            <figure class="past">
+              <img class="past-img" src="assets/weekdays-09a-nasigoreng-kebuli-slide1.jpg" alt="Launching Nasi Goreng Kebuli" loading="lazy" />
+              <figcaption><strong>Launching Nasi Goreng Kebuli</strong><span>Peluncuran menu, 2025</span></figcaption>
+            </figure>
+            <figure class="past">
+              <img class="past-img" src="assets/weekdays-06b-steak-slide2.jpg" alt="Steak Day on the Patio" loading="lazy" />
+              <figcaption><strong>Steak Day on the Patio</strong><span>Makan siang bersama, 2025</span></figcaption>
+            </figure>
+            <figure class="past">
+              <img class="past-img" src="assets/weekdays-03a-matcha-slide1.jpg" alt="Matcha Tasting Session" loading="lazy" />
+              <figcaption><strong>Matcha Tasting Session</strong><span>Workshop, 2025</span></figcaption>
+            </figure>
+            <figure class="past">
+              <img class="past-img" src="assets/weekdays-02-take-a-break.jpg" alt="Take a Break Week" loading="lazy" />
+              <figcaption><strong>Take a Break Week</strong><span>Pekan promo, 2024</span></figcaption>
+            </figure>
+            <figure class="past">
+              <img class="past-img" src="assets/weekdays-11-greenwall-temankantor.jpg" alt="Grand Opening Green Wall" loading="lazy" />
+              <figcaption><strong>Grand Opening Green Wall</strong><span>Menara Bidakara, 2021</span></figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Trusted by: placeholder teks di assets/logos/, timpa file dengan logo asli (SVG/PNG, tinggi 30px otomatis) -->
+    <!-- Trusted by: logo di assets/logos/ (placeholder teks, timpa dengan logo asli).
+         Daftar logo dirender dua kali supaya animasi geser bisa berulang tanpa loncatan (js/main.js). -->
     <section class="trusted">
-      <div class="container text-center">
-        <p class="trusted-label">Sudah dipercaya oleh</p>
-        <div class="trusted-list">
-          <img src="assets/logos/btn.svg" alt="BTN" loading="lazy" />
-          <img src="assets/logos/bidakara.svg" alt="Bidakara" loading="lazy" />
-          <img src="assets/logos/emina.svg" alt="Emina" loading="lazy" />
-          <img src="assets/logos/gembira-parenting.svg" alt="Gembira Parenting" loading="lazy" />
-          <img src="assets/logos/titik-dua-bertemu.svg" alt="Titik Dua Bertemu" loading="lazy" />
-          <img src="assets/logos/sunday-school-athletes.svg" alt="Sunday School Athletes" loading="lazy" />
-          <img src="assets/logos/jakarta-yoga-community.svg" alt="Jakarta Yoga Community" loading="lazy" />
+      <div class="container trusted-copy">
+        <h2>Sudah dipercaya oleh</h2>
+        <p>Kantor, komunitas, dan brand yang memilih Weekdays untuk acara mereka.</p>
+      </div>
+      <div class="container">
+        <div class="logo-strip" tabindex="0" aria-label="Daftar klien Weekdays">
+          <ul class="logo-track">
+            <li class="logo-item"><img src="assets/logos/btn.svg" alt="BTN" /></li>
+            <li class="logo-item"><img src="assets/logos/bidakara.svg" alt="Bidakara" /></li>
+            <li class="logo-item"><img src="assets/logos/emina.svg" alt="Emina" /></li>
+            <li class="logo-item"><img src="assets/logos/gembira-parenting.svg" alt="Gembira Parenting" /></li>
+            <li class="logo-item"><img src="assets/logos/titik-dua-bertemu.svg" alt="Titik Dua Bertemu" /></li>
+            <li class="logo-item"><img src="assets/logos/sunday-school-athletes.svg" alt="Sunday School Athletes" /></li>
+            <li class="logo-item"><img src="assets/logos/jakarta-yoga-community.svg" alt="Jakarta Yoga Community" /></li>
+            <li class="logo-item" aria-hidden="true"><img src="assets/logos/btn.svg" alt="" /></li>
+            <li class="logo-item" aria-hidden="true"><img src="assets/logos/bidakara.svg" alt="" /></li>
+            <li class="logo-item" aria-hidden="true"><img src="assets/logos/emina.svg" alt="" /></li>
+            <li class="logo-item" aria-hidden="true"><img src="assets/logos/gembira-parenting.svg" alt="" /></li>
+            <li class="logo-item" aria-hidden="true"><img src="assets/logos/titik-dua-bertemu.svg" alt="" /></li>
+            <li class="logo-item" aria-hidden="true"><img src="assets/logos/sunday-school-athletes.svg" alt="" /></li>
+            <li class="logo-item" aria-hidden="true"><img src="assets/logos/jakarta-yoga-community.svg" alt="" /></li>
+          </ul>
         </div>
       </div>
     </section>
